@@ -6,6 +6,11 @@ Blaze pulls the public AniList catalog (tens of thousands of titles), plays **of
 
 It does **not** host or scrape pirated episode streams.
 
+# Live
+
+https://calap0309.github.io/blaze-anime/
+
+
 ## Features
 
 - Home hero, trending, seasonal, movies, and currently airing (“Live Now”)

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blaze — Watch Anime</title>
+  <meta name="description" content="Blaze is a Crunchyroll-style anime catalog. Browse every title, play official trailers, and jump to licensed streams. 18+ adult titles are age-gated." />
+  <meta name="theme-color" content="#0b0b0f" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect rx='14' width='64' height='64' fill='%23ff6a00'/%3E%3Cpath d='M22 16l26 16-26 16z' fill='%230b0b0f'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://graphql.anilist.co" />
+  <link rel="preconnect" href="https://s4.anilist.co" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div id="age-gate" class="age-gate hidden" role="dialog" aria-modal="true" aria-labelledby="age-title">
+    <div class="age-card">
+      <div class="logo">BLAZE</div>
+      <h2 id="age-title">18+ Adult catalog</h2>
+      <p>This section includes adult anime (including hentai) from public metadata. Confirm you are 18 or older. Titles that involve minors are blocked.</p>
+      <div class="age-actions">
+        <button class="btn btn-ghost" id="age-no">Leave</button>
+        <button class="btn btn-primary" id="age-yes">I am 18+</button>
+      </div>
+    </div>
+  </div>
+
+  <header class="topbar" id="topbar">
+    <a class="brand" href="#/" aria-label="Blaze home">
+      <span class="brand-mark" aria-hidden="true">▶</span>
+      BLAZE
+    </a>
+    <nav class="nav">
+      <a href="#/" data-nav="home">Home</a>
+      <a href="#/browse" data-nav="browse">Browse</a>
+      <a href="#/live" data-nav="live">Live Now</a>
+      <a href="#/movies" data-nav="movies">Movies</a>
+      <a href="#/adult" data-nav="adult">18+</a>
+      <a href="#/list" data-nav="list">My List</a>
+    </nav>
+    <form class="search" id="search-form" role="search">
+      <input id="search-input" type="search" placeholder="Search 10,000+ anime…" autocomplete="off" />
+      <button type="submit" aria-label="Search">⌕</button>
+    </form>
+  </header>
+
+  <main id="app" class="app"></main>
+
+  <footer class="site-footer">
+    <p><strong>Blaze</strong> is a discovery player — not a pirate stream. Catalog data comes from AniList. Trailers play from YouTube or Dailymotion. Full episodes open on Crunchyroll, Netflix, HIDIVE, and other licensed services.</p>
+    <p>Adult titles require age confirmation. Content involving minors is excluded.</p>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
